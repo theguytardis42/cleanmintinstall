@@ -1,4 +1,6 @@
-sudo apt install zsh tldr git fzf spotify-client btop cargo
+sudo apt install zsh tldr git fzf btop cargo
+
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 sudo gpasswd -a $USER plugdev
 
@@ -13,3 +15,4 @@ wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.co
 sudo nano ~/.zshrc
 #Set ZSH_THEME="current_theme" to ZSH_THEME="kali-like"
 #npx alacritty-themes
+spotify-client
