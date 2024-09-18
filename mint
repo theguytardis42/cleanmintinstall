@@ -1,5 +1,12 @@
-sudo apt install zsh tldr git fzf btop cargo alacritty
 sudo gpasswd -a $USER plugdev
+sudo apt install zsh tldr git fzf btop 
+  #make alacritty dir
+mkdir ~/.config/alacritty/
+  #make alacritty.toml
+touch ~/.config/alacritty/alacritty.toml
+
+
+
 
   #oh my zsh
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
@@ -24,3 +31,4 @@ wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.co
 
 #npx alacritty-themes
 #spotify-client
+#https://vivaldi.com/download/
