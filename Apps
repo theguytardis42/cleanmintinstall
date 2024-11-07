@@ -14,3 +14,4 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.0.3495.10-1_amd64.deb
     sudo dpkg -i vivaldi-stable_7.0.3495.10-1_amd64.deb
 sudo rm vivaldi-stable_7.0.3495.10-1_amd64.deb Notebook-3.2.0.deb protonvpn-stable-release_1.0.5_all.deb
+sudo apt upgrade mtr-tiny
