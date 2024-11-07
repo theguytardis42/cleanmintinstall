@@ -47,6 +47,27 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
+echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> /~.zshrc
+echo '' >> testtext
+echo '# fnm' >> testtext
+echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> testtext
+echo 'if [ -d "$FNM_PATH" ]; then' >> testtext
+echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> testtext
+echo '  eval "`fnm env`"' >> testtext
+echo 'fi' >> testtext
+echo '' >> testtext
+echo 'export NVM_DIR="$HOME/.nvm"' >> testtext
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> testtext
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> testtext
+
+
+
+
+
+
+
+
+
 
 
 
