@@ -24,6 +24,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
 #sudo nano ~/.zshrc
 #set ZSH_THEME="current_theme" to ZSH_THEME="kali-like"
+sed -i 's/ZSH_THEME="current_theme"/ZSH_THEME="kali-like"/g' ~/.zshrc
 
 ##################################################### add this to bottom ---v
 
