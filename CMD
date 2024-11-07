@@ -17,6 +17,18 @@ sudo apt install zsh
   chsh -s $(which zsh)
   wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
   sed -i 's/ZSH_THEME="current_theme"/ZSH_THEME="kali-like"/g' ~/.zshrc
+  sed -i 's/PROMPT_ALTERNATIVE=twoline/PROMPT_ALTERNATIVE=oneline/g' ~/.oh-my-zsh/themes/kali-like.zsh-theme
+  sed -i 's/alias l/#alias l/g' ~/.oh-my-zsh/themes/kali-like.zsh-theme
+  sed -i 's/alias ll/#alias ll/g' ~/.oh-my-zsh/themes/kali-like.zsh-theme
+
+touch ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias at="npx alacritty-themes"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias rl="source ~/.zshrc; clear"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias l="ls --group-directories-first -F -A -X"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias ll="ls -X -F"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias differ="colordiff -y --suppress-common-lines"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias dif="colordiff -y -W 100 --suppress-common-lines"' >> ~/.oh-my-zsh/custom/alias.zsh
+ echo 'alias sudoup="sudo apt update --yes && sudo apt upgrade --yes"' >> ~/.oh-my-zsh/custom/alias.zsh
 
 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> /~.zshrc
 echo '' >> /~.zshrc
