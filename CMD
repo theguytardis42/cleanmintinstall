@@ -4,61 +4,32 @@
   sudo apt install snapd -y
   sudo snap install nordpass
 
-
-#make alacritty dir and toml and clone source
-  mkdir ~/.config/alacritty/
+mkdir ~/.config/alacritty/
   touch ~/.config/alacritty/alacritty.toml
   git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-sudo apt install alacritty
+  cd alacritty
+  sudo apt install alacritty
 
-  #install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-#oh my zsh and make default
-  sudo apt install zsh
+sudo apt install zsh
   sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
   chsh -s $(which zsh)
-
-#get kali theme for omzsh
   wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
-#sudo nano ~/.zshrc
-#set ZSH_THEME="current_theme" to ZSH_THEME="kali-like"
-sed -i 's/ZSH_THEME="current_theme"/ZSH_THEME="kali-like"/g' ~/.zshrc
-
-##################################################### add this to bottom ---v
-
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
-# fnm
-FNM_PATH="/home/lazarus/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/lazarus/.local/share/fnm:$PATH"
-  eval "`fnm env`"
-fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-##################################################### END
-
-
-
-
+  sed -i 's/ZSH_THEME="current_theme"/ZSH_THEME="kali-like"/g' ~/.zshrc
 
 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> /~.zshrc
-echo '' >> testtext
-echo '# fnm' >> testtext
-echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> testtext
-echo 'if [ -d "$FNM_PATH" ]; then' >> testtext
-echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> testtext
-echo '  eval "`fnm env`"' >> testtext
-echo 'fi' >> testtext
-echo '' >> testtext
-echo 'export NVM_DIR="$HOME/.nvm"' >> testtext
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> testtext
-echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> testtext
+echo '' >> /~.zshrc
+echo '# fnm' >> /~.zshrc
+echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> /~.zshrc
+echo 'if [ -d "$FNM_PATH" ]; then' >> /~.zshrc
+echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> /~.zshrc
+echo '  eval "`fnm env`"' >> /~.zshrc
+echo 'fi' >> /~.zshrc
+echo '' >> /~.zshrc
+echo 'export NVM_DIR="$HOME/.nvm"' >> /~.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> /~.zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> /~.zshrc
 
 
 
@@ -69,12 +40,6 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This
 
 
 
-
-
-
-
-#git clone https://github.com/alacritty/alacritty.git
-#cd alacritty
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #rustup override set stable
 #rustup update stable
