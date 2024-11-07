@@ -1,7 +1,7 @@
- sudo gpasswd -a $USER plugdev
-  sudo apt install tldr git fzf btop 
-  sudo rm /etc/apt/preferences.d/nosnap.pref #remove snap disable
-  sudo apt install snapd -y
+sudo apt update --yes && sudo apt upgrade --yes
+sudo gpasswd -a $USER plugdev
+sudo rm /etc/apt/preferences.d/nosnap.pref #remove snap disable
+  sudo apt install tldr git fzf btop snapd -y
   sudo snap install nordpass
 
 mkdir ~/.config/alacritty/
