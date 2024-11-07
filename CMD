@@ -15,6 +15,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt install zsh
   sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
   chsh -s $(which zsh)
+#################################################################################
+
   wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
   sed -i 's/ZSH_THEME="current_theme"/ZSH_THEME="kali-like"/g' ~/.zshrc
   sed -i 's/PROMPT_ALTERNATIVE=twoline/PROMPT_ALTERNATIVE=oneline/g' ~/.oh-my-zsh/themes/kali-like.zsh-theme
@@ -30,18 +32,18 @@ touch ~/.oh-my-zsh/custom/alias.zsh
  echo 'alias dif="colordiff -y -W 100 --suppress-common-lines"' >> ~/.oh-my-zsh/custom/alias.zsh
  echo 'alias sudoup="sudo apt update --yes && sudo apt upgrade --yes"' >> ~/.oh-my-zsh/custom/alias.zsh
 
-echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> /~.zshrc
-echo '' >> /~.zshrc
-echo '# fnm' >> /~.zshrc
-echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> /~.zshrc
-echo 'if [ -d "$FNM_PATH" ]; then' >> /~.zshrc
-echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> /~.zshrc
-echo '  eval "`fnm env`"' >> /~.zshrc
-echo 'fi' >> /~.zshrc
-echo '' >> /~.zshrc
-echo 'export NVM_DIR="$HOME/.nvm"' >> /~.zshrc
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> /~.zshrc
-echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> /~.zshrc
+echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ~/.zshrc
+echo '' >> ~/.zshrc
+echo '# fnm' >> ~/.zshrc
+echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> ~/.zshrc
+echo 'if [ -d "$FNM_PATH" ]; then' >> ~/.zshrc
+echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> ~/.zshrc
+echo '  eval "`fnm env`"' >> ~/.zshrc
+echo 'fi' >> ~/.zshrc
+echo '' >> ~/.zshrc
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion' >> ~/.zshrc
 
 
 
