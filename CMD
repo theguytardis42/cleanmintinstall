@@ -9,6 +9,17 @@ mkdir ~/.config/alacritty/
   git clone https://github.com/alacritty/alacritty.git
   cd alacritty
   sudo apt install alacritty
+echo 'import = [
+  "/home/lazarus/.npm/_npx/808b709e6234a442/node_modules/alacritty-themes/themes/Terminal-app.toml"
+]
+
+live_config_reload = true
+
+[mouse]
+bindings = [
+{ mouse = "Right", action = "Paste" },
+]' >> ~/.config/alacritty/alacritty.toml
+
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
