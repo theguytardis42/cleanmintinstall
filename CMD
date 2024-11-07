@@ -1,8 +1,9 @@
 sudo apt update --yes && sudo apt upgrade --yes
 sudo gpasswd -a $USER plugdev
 sudo rm /etc/apt/preferences.d/nosnap.pref #remove snap disable
-  sudo apt install tldr git fzf btop snapd -y
-  sudo snap install nordpass
+  sudo apt install tldr git fzf btop 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 
 mkdir ~/.config/alacritty/
   touch ~/.config/alacritty/alacritty.toml
@@ -19,7 +20,7 @@ live_config_reload = true
 bindings = [
 { mouse = "Right", action = "Paste" },
 ]' >> ~/.config/alacritty/alacritty.toml
-
+cd
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
@@ -65,13 +66,8 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This
 
 
 
-
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #rustup override set stable
 #rustup update stable
-#cargo install alacritty
-
 
 #npx alacritty-themes
-#spotify-client
-#https://vivaldi.com/download/
+
