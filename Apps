@@ -1,5 +1,5 @@
 sudo apt update --yes && sudo apt upgrade --yes
-sudo apt install guake colordiff cowsay git protonvpn-stable-release sublime-text spotify-client clamav vivaldi-stable notebook
+sudo apt install guake colordiff cowsay git sublime-text spotify-client clamav
 sudo apt install flatpak snapd -y
 sudo apt install gnome-software-plugin-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
