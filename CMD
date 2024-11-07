@@ -61,13 +61,3 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This
 
 
 
-
-
-
-
-
-#rustup override set stable
-#rustup update stable
-
-#npx alacritty-themes
-
