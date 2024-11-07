@@ -10,7 +10,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
   wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.5_all.deb
     sudo dpkg -i ./protonvpn-stable-release_1.0.5_all.deb && sudo apt update -y
     sudo apt install proton-vpn-gnome-desktop
-    sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator
-      sudo dpkg -i "protonvpn-stable-release_1.0.5_all.deb"
-   wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.0.3495.10-1_amd64.deb
+    sudo apt install libayatana-appindicator3-1 gir1.2-ayatanaappindicator3-0.1 gnome-shell-extension-appindicator -y
+  wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.0.3495.10-1_amd64.deb
+    sudo dpkg -i vivaldi-stable_7.0.3495.10-1_amd64.deb
 sudo rm vivaldi-stable_7.0.3495.10-1_amd64.deb Notebook-3.2.0.deb protonvpn-stable-release_1.0.5_all.deb
