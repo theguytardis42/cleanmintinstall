@@ -1,24 +1,26 @@
-  sudo gpasswd -a $USER plugdev
-  sudo apt install tldr git fzf btop 
-  sudo rm /etc/apt/preferences.d/nosnap.pref #remove snap disable
-  sudo apt install snapd -y
-  sudo snap install nordpass
+sudo apt install nala
+sudo nala update
+sudo nala upgrade
+sudo gpasswd -a $USER plugdev
+sudo nala install tldr git fzf btop colordiff cowsay wget clamav
+sudo rm /etc/apt/preferences.d/nosnap.pref #remove snap disable
+sudo nala install snapd -y
+sudo snap install nordpass
 
 
-#make alacritty dir and toml and clone source
-  mkdir ~/.config/alacritty/
-  touch ~/.config/alacritty/alacritty.toml
-  git clone https://github.com/alacritty/alacritty.git
+#####make alacritty dir and toml and clone source
+mkdir ~/.config/alacritty/
+touch ~/.config/alacritty/alacritty.toml
+git clone https://github.com/alacritty/alacritty.git
 cd alacritty
 sudo apt install alacritty
 
-  #install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-#oh my zsh and make default
-  sudo apt install zsh
-  sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-  chsh -s $(which zsh)
+
+#####oh my zsh and make default
+sudo apt install zsh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+chsh -s $(which zsh)
 
 #get kali theme for omzsh
   wget -O ~/.oh-my-zsh/themes/kali-like.zsh-theme https://raw.githubusercontent.com/clamy54/kali-like-zsh-theme/master/kali-like.zsh-theme
@@ -52,12 +54,8 @@ export NVM_DIR="$HOME/.nvm"
 
 
 
-#git clone https://github.com/alacritty/alacritty.git
-#cd alacritty
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #rustup override set stable
 #rustup update stable
-#cargo install alacritty
 
 
 #npx alacritty-themes
