@@ -5,9 +5,14 @@ sudo nala install flatpak snapd -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install com.github.tchx84.Flatseal org.nicotine_plus.Nicotine com.rustdesk.RustDesk -y
 
-wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.0.3495.10-1_amd64.deb
-sudo dpkg -i vivaldi-stable_7.0.3495.10-1_amd64.deb
-sudo rm vivaldi-stable_7.0.3495.10-1_amd64.deb 
+  #wget https://downloads.vivaldi.com/stable/vivaldi-stable_7.0.3495.10-1_amd64.deb
+  #sudo dpkg -i vivaldi-stable_7.0.3495.10-1_amd64.deb
+  #sudo rm vivaldi-stable_7.0.3495.10-1_amd64.deb 
+##### Vivaldi
+wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo dd of=/usr/share/keyrings/vivaldi-browser.gpg
+echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print-architecture)] https://repo.vivaldi.com/archive/deb/ stable main" | sudo dd of=/etc/apt/sources.list.d/vivaldi-archive.list
+sudo apt update && sudo apt install vivaldi-stable
+
 
 
 #install rust
