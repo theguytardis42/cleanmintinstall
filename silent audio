@@ -1,0 +1,28 @@
+# Update the package list to ensure we have the latest information on available packages
+sudo apt update && \
+
+# Install 'mpg123' for audio playback and 'ffmpeg' for audio file conversion
+sudo apt install -y mpg123 ffmpeg && \
+
+# Generate a 60-second silent MP3 file using 'ffmpeg' with specified audio parameters
+ffmpeg -f lavfi -t 60 -i anullsrc=r=44100:cl=stereo -q:a 9 /usr/local/share/silence.mp3 && \
+
+# Create a systemd service file to play the silent MP3 at startup
+echo -e "[Unit]
+Description=Play silent audio at startup to keep receiver awake
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/mpg123 -q --loop -1 /usr/local/share/silence.mp3
+Restart=always
+User=alex
+Environment=XDG_RUNTIME_DIR=/run/user/$(id -u $(whoami))
+
+[Install]
+WantedBy=multi-user.target" | sudo tee /etc/systemd/system/silence-audio.service > /dev/null && \
+
+# Reload systemd to apply the new service configuration
+sudo systemctl daemon-reload && \
+
+# Enable the service to start at boot and start it immediately
+sudo systemctl enable --now silence-audio.service
