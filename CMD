@@ -43,9 +43,9 @@ touch ~/.oh-my-zsh/custom/alias.zsh
 echo 'fpath+=${ZDOTDIR:-~}/.zsh_functions' >> ~/.zshrc
 echo '' >> ~/.zshrc
 echo '# fnm' >> ~/.zshrc
-echo 'FNM_PATH="/home/lazarus/.local/share/fnm"' >> ~/.zshrc
+echo 'FNM_PATH="/home/alex/.local/share/fnm"' >> ~/.zshrc
 echo 'if [ -d "$FNM_PATH" ]; then' >> ~/.zshrc
-echo '  export PATH="/home/lazarus/.local/share/fnm:$PATH"' >> ~/.zshrc
+echo '  export PATH="/home/alex/.local/share/fnm:$PATH"' >> ~/.zshrc
 echo '  eval "`fnm env`"' >> ~/.zshrc
 echo 'fi' >> ~/.zshrc
 echo '' >> ~/.zshrc
